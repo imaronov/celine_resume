@@ -1,0 +1,148 @@
+%-------------------------
+% Cover Letter in LaTeX
+% Author : Ilya Aronov
+% License : MIT
+% February 28th, 2024
+%------------------------
+
+\pdfinfo
+{
+   /Author (Celine Aronov)
+   /Title  (Recruitment Manager)
+   /Subject (Cover Letter)
+   /Keywords (Talent Acquisition Strategy;
+                Recruitment Metrics;
+                Candidate Sourcing;
+                Interview Process Optimization;
+                Diversity and Inclusion Initiatives;
+                Applicant Tracking System (ATS) Management;
+                Recruitment Team Leadership;
+                Employer Branding;
+                Recruitment Compliance;
+                Recruitment Technology Implementation
+                )
+}
+
+\documentclass[12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+%\usepackage{fontawesome5}
+\usepackage{eso-pic}
+\usepackage{charter}
+
+%\graphicspath{ {../images/} }
+
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\definecolor{gr}{RGB}{225,225,225}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\myname{Celine Aronov}
+\def\myemail{celine.aronov@gmail.com}
+% \def\mylinkedin{ilya-aronov-b488a965}
+\def\myphone{(413)212-8005}
+\def\mylocation{Riverview, FL}
+\def\mytitle{Recruitment Manager}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Company Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\hiringManager{Hiring Manager}
+\def\companyName{National Pool Partners}
+\def\companyAddress{1715 N. Westshore Blvd, Suite 390}
+\def\companyCity{Tampa, FL 33607}
+
+
+    % JPMC mission statement
+% \def\companyMission{to be the best financial services company in the world}
+    % default mission statement 
+% \def\companyMission{dedicated to crafting high-quality, efficient, and user-friendly solutions}
+
+
+%-------------------------
+% Custom commands
+\newcommand{\addressHeading}[4]{
+    {#1}\\
+    {#2}\\
+    {#3}\\
+    {#4}\\
+}
+
+\newcommand{\greeting}{
+    \vspace{-0.1in}Dear \hiringManager,
+}
+
+%-------------------------------------------
+%%%%%%  COVER LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Shaded header banner
+\AddToShipoutPictureBG{%
+\color{gr}
+\AtPageUpperLeft{\rule[-1.3in]{\paperwidth}{1.3in}}
+}
+
+%-------------------------
+% Header
+\begin{center}
+{\fontsize{28}{0}\selectfont\scshape \myname}
+
+\fontsize{10}{0}\selectfont\scshape \href{mailto:\myemail}{\faEnvelope\enspace \myemail}\hfill
+% \fontsize{10}{0}\selectfont\scshape \href{https://linkedin.com/in/\mylinkedin}{\faLinkedinIn\enspace linkedin.com/in/\mylinkedin}\hfill
+%\fontsize{10}{0}\selectfont\scshape \href{\portfolio}{\faUser\enspace portfolio}\hfill
+\fontsize{10}{0}\selectfont\scshape \href{tel:\myphone}{\faPhone\enspace \myphone}\hfill
+\fontsize{10}{0}\selectfont\scshape \faMapMarker\enspace \mylocation
+\end{center}
+
+%-------------------------
+% Body
+\vspace{0.2in}
+
+% Opening block
+\today
+\\ \\
+\addressHeading{\hiringManager}{\companyName}{\companyAddress}{\companyCity}
+
+\greeting
+
+% Body
+
+I am writing to express my interest in the Recruitment Manager position at \companyName, as advertised. With a strong background in talent acquisition, a proven track record of developing effective recruitment strategies, and a passion for fostering positive candidate experiences, I am confident in my ability to contribute to the continued success of your team.
+
+Throughout my career, I have demonstrated a keen ability to identify top talent and build relationahips in the healthcare industry. In my previous role at Maxim Health Services, I spearheaded recruitment efforts to increase the quality of hires. I achieved this by implementing innovative sourcing techniques, streamlining the interview process, and fostering strong partnerships with hiring managers to understand their specific needs and requirements.
+
+Furthermore, I possess excellent communication and interpersonal skills, which enable me to build rapport with candidates, hiring managers, and cross-functional teams alike. I thrive in fast-paced environments and am adept at managing multiple priorities while maintaining a high level of attention to detail and quality. By utilizing analytics and metrics, I have been able to identify trends, anticipate hiring needs, and proactively address challenges, resulting in more efficient and effective recruitment outcomes.
+
+I am genuinely excited about the opportunity to join \companyName\, and contribute to your fast paced and growing company. I am confident that my expertise in recruitment and sales, combined with my passion for fostering talent  to inform recruitment strategies and optimize hiring processes.
+
+Thank you for considering my application. I look forward to the possibility of discussing how my skills and experiences align with the needs of your team in more detail. Please find my resume attached for your review.
+
+
+% Thank you,\\
+% \myname
+% \noindent\input{body}
+
+% Closer
+\vspace{0.1in}
+\vfill
+
+\begin{flushright}
+% \closer,
+
+\vspace{-0.1in}
+Sincerely, \\
+\myname\\
+
+% \includegraphics[width=1.5in]{signiture.png}
+%\includegraphics[width=1.5in]{signiture_no_background.png}
+
+%\vspace{-0.1in}
+\mytitle
+
+\end{flushright}
+
+\end{document}
